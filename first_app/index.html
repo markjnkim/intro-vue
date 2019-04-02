@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 
-    <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div id="first-app">
-            <br>
-            <h1>Hello {{first_name}} {{last_name}} </h1>
+  <div class="container">
+    <div id="first-app">
+      <br>
+      <h1>Hello {{first_name}}</h1>
+      <!-- <p v-html="vmHtml"></p> -->
+      <h2 v-if="last_name">{{ full_name() }}</h2>
+      <h2>{{ greet('Evening') }}</h2>
 
-            <h2>{{ full_name() }}</h2>
-            <h2>{{ greet('Evening') }}</h2>
-
-            <img v-on:click="alert()" v-bind:src="url"></img>
-            <p>
-                <a v-bind:href="url">link</a>
-            </p>
-            <label for="first_name">First Name</label>
-            <input type="text"  v-model="first_name" >
-            <br>
-            <label for="first_name">Last Name</label>
-            <input type="text"  v-model="last_name" >
-        </div>
-
+      <img v-on:click="alert()" v-bind:src="url"></img>
+      <p>
+        <a v-bind:href="url">link</a>
+      </p>
+      <label for="first_name">First Name</label>
+      <input type="text" v-model="first_name">
+      <br>
+      <label for="first_name">Last Name</label>
+      <input type="text" v-model="last_name">
     </div>
-    <script src="hello.js"></script>
+  </div>
+  <script src="hello.js"></script>
 </body>
 
 </html>

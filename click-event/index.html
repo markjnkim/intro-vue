@@ -21,7 +21,7 @@
         <br>
         <div id="click">
 
-          <button type="button" class="btn btn-primary" v-on:click="add(1)">Add a Year</button>
+          <button type="button" class="btn btn-primary" v-on:click.once="add(1)">Add a Year</button>
           <button type="button" class="btn btn-secondary" v-on:dblclick="add(10)">Add 10 Years</button>
 
           <button type="button" class="btn btn-primary" v-on:click="sub(1)">Subtract a Year</button>

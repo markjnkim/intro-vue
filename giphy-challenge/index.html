@@ -29,7 +29,11 @@
         </div>
       </div>
       <div>
-            <img v-bind:src="gifUrl"  />
+        <img src="https://media.giphy.com/media/ZLxRWG0vhzpiE/giphy-downsized.gif" />
+        <img v-bind:src="gifUrl" />
+        
+        <img v-for="gif in gifUrl" src/>
+        {{gif.images.fixed_height.url}}
       </div>
     </div>
   </div>
