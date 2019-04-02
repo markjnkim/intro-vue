@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div id="todo">
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Todo List</h1>
+        <br>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend row">
+            <!-- <span class="input-group-text" id="basic-addon1">🔍</span> -->
+              <div class="col-sm-6">
+            
+              <input type="text" class="form-control" placeholder="Username" v-model="name" >
+              <span>{{name}}</span>
+              <br>
+            </div>
+
+            <br>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" v-model="todo" value="Todo List">
+              <span>{{todo}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="vue-app">
+    <h1>Events</h1>
+    <button v-on:click.once="add(1)" v-on:dblclick="add(10)">Add a Year</button>
+    <button v-on:click.twice="subtract(1)" v-on:dblclick="subtract(10)">Subtract a Year</button>
+    <p>My age is {{age}}</p>
+    <!-- <button v-on:dblclick="add(10)">PING</button>
+    <button v-on:dblclick="subtract(10)">PING</button> -->
+    <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div>
+
+
+    <h1>{{ greet('day') }}</h1>
+    <a v-on:click.prevent="click" v-bind:href="website[0]">website</a>
+    <input type="text" v-bind:value="name[0].first">
+    <p>Name: {{ greet('afternoon') }}</p>
+    <p>Job: {{ job }}</p>
+    <p v-html="websiteTag" target="_blank">The Stack</p>
+
+  </div>
+  <div id="vue-keyevent">
+    <h1>Keyboard Events</h1>
+    <label>Name:</label>
+    <input type="text" v-model="name" />
+    <div>{{name}}</div>
+    <br>
+    <label>Age:</label>
+    <input type="text" v-model="age" />
+    <div>{{age}}</div>
+    <br>
+  </div>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
