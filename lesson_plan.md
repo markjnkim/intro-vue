@@ -148,8 +148,9 @@ add a modifier that will prevent a button from working more than once.
     SUBMIT
     `v-on:click.once`   
     `v-on:click.prevent`  `event.preventDefault()`
+    `v-on:keyup.enter` 
 
-Make sure students understand the availability of other events as well like `keyUp` and `mouseover`
+Make sure students understand the availability of other events as well like `keyup` and `mouseover`
 
 * Call on students to answer the following questions one at time, filling in gaps in their explanations as necessary:
 
