@@ -165,6 +165,7 @@ Make sure students understand the availability of other events as well like `key
 ### 6. Students Do: Giphy API Call (15 mins) 
 Start a new Vue app!
 Have an input search field that returns gifs related to that term.
+**Hint** How to loop through an array in the template script?
 
 
 ### 7. Instructor Do (5 min)
