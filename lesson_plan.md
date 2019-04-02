@@ -5,6 +5,7 @@
 Today will be our first day introducing a new front end framework Vue.js
 
 <!-- Slide Show -->
+[slideshow](https://docs.google.com/presentation/d/1cGttCli5C_dHWPycW_UGh9i8OLi_Ny9X7WkDYKkmArY/edit?usp=sharing) (3 min)
 
 <!-- `Summary: Complete activities 28-32 in Unit 19 & 1-6 in Unit 20` -->
 
@@ -12,43 +13,44 @@ Today will be our first day introducing a new front end framework Vue.js
 
 * Students should understand how an expression is used to render data to the DOM.
 
-* Students should understand how to conditionally render components.
+* Students should understand how directives are used to bind attributes to objects.
 
 * Students should understand 2-way data binding.
 
-* Students should understand how directives are used to bind attributes to objects.
+* Students should understand how to create event listeners.  [click-event](./click-event/click.js)
 
-* Students should understand how to render a list of elements in an array.
+* Students should understand how to conditionally render components. 
 
-* Students should understand how to create event listeners.
-
+* Students should understand how to render a list of elements in an array. [giphy-challenge](./giphy-challenge/app.js)
 
 ### Class Objectives
 
-* Understanding Vue's templating system.
-
-* To cover conditional rendering.
+* Understanding Vue's template syntax.
 
 * To introduce data binding.
 
+* To cover conditional rendering.
 
 - - -
 
-### 1. Instructor Do: Welcome Class and Vue Demo (45 mins) 
-#### Phase 1 - Wire up our files(8 mins)(critical)
+### 1. Instructor Do: Welcome Class and Vue Demo (35 mins) 
+#### Phase 1 - Set up our app (7 mins)(critical)
 * Let's create a new Vue app from scratch.  First create a new directory called `first-app`.  
-* Then create a new js file, `hello.js`, html file `index.html` 
 
-* Include relative file path connections for the `hello.js`  
+* Then create a new js file, `hello.js` and an html file `index.html` 
+
 
 * Let's start in our `hello.js` file and create our first `Vue instance` `const helloWorld` and `options object` with our anchor to a static html element css selector`"#first-app"` and `data` object.  
 
-* Create the data object only `first_name` and `last_name`
+* Create the two properties in the data object only `first_name` and `last_name`
 
-* `Sample Code is provided` [here]("./first_app/hello.js")
+* Discuss the significance of the `el` and `data` properties.
+
+* `Sample Code is provided` [here](./first-app/hello.js)
 
 * Now let's use emmet `html:5` to quickly build a basic html page with a `<div id="first-app">` anchor which will wrap our Vue template script.
 
+* Include relative file path script tag for the `hello.js` in your `index.html` file
 * Stress the important of the external vue script CDN in the `<head>` of html file.  
 `<script src="https://unpkg.com/vue"></script>`
 
@@ -131,7 +133,7 @@ Now's let's move onto how to bind an element to a click event.
 
 
 #### Phase 4 - Class Activity (10 min)
-[click event](./click-event)
+[click event](./click-event/click.js)
 Using our starter code, build a Vue app that creates four buttons with the following functionality.
 * add one year on a click
 * add 10 years on a double click
@@ -163,6 +165,7 @@ Make sure students understand the availability of other events as well like `key
     **A:** We use the directive `v-on:click.prevent`.
 
 ### 6. Students Do: Giphy API Call (15 mins) 
+[Giphy-challenge](./giphy-challenge/app.js)
 Start a new Vue app!
 Have an input search field that returns gifs related to that term.
 **Hint** How to loop through an array in the template script?
