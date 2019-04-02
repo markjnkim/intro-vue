@@ -148,8 +148,10 @@ add a modifier that will prevent a button from working more than once.
     SUBMIT
     `v-on:click.once`   
     `v-on:click.prevent`  `event.preventDefault()`
+    `v-on:keyup.enter` 
 
-Make sure students understand the availability of other events as well like `keyUp` and `mouseover`
+Make sure students understand the availability of other events as well like `keyup` and `mouseover`
+* Comment on the readability of the code compared to jQuery.
 
 * Call on students to answer the following questions one at time, filling in gaps in their explanations as necessary:
 
@@ -163,6 +165,7 @@ Make sure students understand the availability of other events as well like `key
 ### 6. Students Do: Giphy API Call (15 mins) 
 Start a new Vue app!
 Have an input search field that returns gifs related to that term.
+
 
 ### 7. Instructor Do (5 min)
 * Walk Through solution starting with the fetch response.  Then looping through the array.
