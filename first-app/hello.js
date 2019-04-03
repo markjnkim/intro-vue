@@ -5,7 +5,7 @@ const helloWorld = new Vue({
     first_name: "Matt",
     last_name: "Damon",
     url: "https://media.giphy.com/media/ZLxRWG0vhzpiE/giphy-downsized.gif",
-    vmHtml: "<span style='color:red; border: solid 2px purple;'>Pretty aren't I?</span>"
+    rawHtml: "<span style='color:red; border: solid 2px purple;'>Pretty aren't I?</span>"
   },
   methods: {
     full_name: function () {
