@@ -9,21 +9,16 @@
         * Events
         * DOM
     * ES6
-        * Map
+        * Loops . for (key in array)
         * Template Literals
-        * Arrow Functions
         * fetch
 * HTML
 * CSS
-* jQuery
-* DOM Manipulation
 * Server Side Rendering with Express Template Engine Namely Handlebars
-
 
 ## Prerequisite Instructor Knowledge
 * Understanding how observers watch for changes in the data state to re-render.
-
-
+* 
 
 ## Other Relevant Context
 * One day of a 3 day course with assignment
