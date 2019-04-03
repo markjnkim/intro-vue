@@ -38,7 +38,7 @@ Today will be our first day introducing a new front end framework Vue.js
 
 * Let's create a new Vue app by first creating a new directory called `first-app`.  
 
-* Create 2 files, `hello.js` and `index.html`.
+* In that directory create 2 files, `hello.js` and `index.html`.
 
 * In `hello.js` we create our first `Vue instance` and `options object`.  
 
