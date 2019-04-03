@@ -70,18 +70,19 @@ Demo Vue's ability to dynamically render data and customize html to a view with 
 Due to the reactive nature, changes in the data state of the object trigger UI changes.  
 Contrast what this was like in jQuery.
 
- * `{{expression}}` similar to handlebars in the html templating form that allows various javascript expressions.
+ * `{{expression}}` similar to handlebars and allows various javascript expressions.
 
 * Let's create a method in our `methods` property called `full_name()`.
 
 * Create a new tag `<h2>` that will render this method.  Remember to use `()`.
 
 * Side Note - Notice how the lexical scope of `this` captures `first_name` due to hoisting without needing to reference `data`.  Therefore do not use fat arrow functions here due to the change in the lexical scope of `this`.
+* Mention more properties in a Vue instance object like `computed` and `watcher` and have students research their utility. 
 
 ### 3. Students Do (7 min)
 
-* Create another method `greet()`, that takes in a parameter for `time`.  This will accept a string and output a message in an `<h3>` for example.
-`Good Evening`, where `Evening` string will depend on the argument.
+* Create another method `greet()`, that takes in a parameter for `time`.  The method will accept a string and output a message in an `<h3>` for example.
+`Good Evening`, where `Evening` is a string.
 
  #### Phase 3 - Using Directives for Data Binding(10 min)(critical)
  `Vue.js handles data binding using directives to display data in the Vue's template.`
@@ -90,6 +91,7 @@ Contrast what this was like in jQuery.
  * Add another object to `data` in `hello.js` <br> `url: "https://media.giphy.com/media/ZLxRWG0vhzpiE/giphy-downsized.gif"`
 
  * Now add a `<img v-bind:src="url">` in the html file.
+ 
  * Notice how the object no longer uses `{{ }}` when expressing the `url` property in the directive `v-bind`.
 
 Notice using the directive for bind can be used for many attributes. 
@@ -103,7 +105,7 @@ Notice using the directive for bind can be used for many attributes.
             <p>
                 <a v-bind:href="url">link</a>
             </p>
-* Use the `v-html` directive in a new `<p>` tag.  Create a new data object `vmHtml: "<span style='color:red; border: solid 2px purple;'>Pretty aren't I?</span>"`.<br>
+* Use the `v-html` directive in a new `<p>` tag.  Create a new data object `rawHtml: "<span style='color:red; border: solid 2px purple;'>Pretty aren't I?</span>"`.<br>
 Side note - In an existing element will replace content like using `innerHTML`.
 
 * Now let's create an event handler by using another directive in our image tag `v-on:click` which will call new method `alert` which we will now create that contains a greeting with the `first_name`.
@@ -113,7 +115,8 @@ Side note - In an existing element will replace content like using `innerHTML`.
 * Now let's create on input field that gives our user the ability to change our `first_name` and `last_name`.  
 * `<input v-model="first_name">`
 * `<input v-model="last_name">`
-* Notice how every piece of `first_name` is now updated including the alert!  `v-model` has created a 2-way data bind.(data flows from the view as well as to the view from the app)
+* Notice how every piece of `first_name` is now updated including the alert!  `v-model` has created a 2-way data bind.<br>
+Data flows from the view as well as to the view from the app)
 * A consistent, stable, and fast UI data state that is easily maintained is the hallmark of a modern front-end framework.
 
 ### 4. Student Do - Conditional Rendering(5 min)
