@@ -32,11 +32,11 @@ Today will be our first day introducing a new front end framework Vue.js
 #### Phase 1 - Introduction & Set up
 
 ### [Slideshow](https://docs.google.com/presentation/d/1cGttCli5C_dHWPycW_UGh9i8OLi_Ny9X7WkDYKkmArY/edit?usp=sharing) (3 min)<br>
-### Set up our app (critical)
+### Set up our app from scratch (critical)
 
 * `Sample Code is provided` [here](./first-app/hello.js)
 
-* Let's create a new Vue app from scratch.  First create a new directory called `first-app`.  
+* Let's create a new Vue app by first creating a new directory called `first-app`.  
 
 * Create 2 files, `hello.js` and `index.html`.
 
@@ -50,35 +50,27 @@ Today will be our first day introducing a new front end framework Vue.js
 
 * Include relative file path script tag for the `hello.js` in your `index.html` file
 
-* Stress the important of the external vue script CDN in the `<head>` of html file.  
+* KEY FOCUS POINT - Vue.js script CDN in the html file.  
 `<script src="https://unpkg.com/vue"></script>`
-
-* Also note there is also npm package
-`npm i vue`
 
 ### 2. Instructor Do: Template Expressions (8 min)
 #### Phase 2 - Reactive Data Render (critical)
 ###  Objective
 Demo Vue's ability to dynamically render data and customize html to a view with high speed and performance.  This can be done in Vue.js using expressions and data binding.
 
-* Stress the importance of our Vue template being wrapped by the `div` Vue instance. 
+* KEY POINT - template must be wrapped by the `div` referred to in the Vue instance. 
 
-* A simple `<h1>Hello<h1>` just to start
-
-* Now we can implement our instance data objects into our html code by adding 
- `{{ first_name }}` into our `<h1>` tag.  
+* A simple `<h1>Hello {{ first_name }} <h1>` to start.
 
 * Open html in the browser and observe the wonder!<br>
  Congrats you are now all Vue developers!!!
 
-* Go to the console window in the browser and change the data object
+* Go to the console tab in Chrome's browser's developer tools window and change the data property to
 `helloWorld.first_name = "John"`<br>
 Due to the reactive nature, changes in the data state of the object trigger UI changes.  
 Contrast what this was like in jQuery.
 
  * `{{expression}}` similar to handlebars in the html templating form that allows various javascript expressions.
-
-* Now lets make our string dynamic by including a method.
 
 * Let's create a method in our `methods` property called `full_name()`.
 
@@ -86,20 +78,19 @@ Contrast what this was like in jQuery.
 
 * Side Note - Notice how the lexical scope of `this` captures `first_name` due to hoisting without needing to reference `data`.  Therefore do not use fat arrow functions here due to the change in the lexical scope of `this`.
 
-### 3. Students Do (5 min)
+### 3. Students Do (7 min)
 
 * Create another method `greet()`, that takes in a parameter for `time`.  This will accept a string and output a message in an `<h3>` for example.
 `Good Evening`, where `Evening` string will depend on the argument.
-* Quick Walk through
-
 
  #### Phase 3 - Using Directives for Data Binding(10 min)(critical)
- `Vue.js handles data binding using directives used similarly like html attributes.`
+ `Vue.js handles data binding using directives to display data in the Vue's template.`
+
 ### 4. Instructor Do (10 min)
  * Add another object to `data` in `hello.js` <br> `url: "https://media.giphy.com/media/ZLxRWG0vhzpiE/giphy-downsized.gif"`
 
  * Now add a `<img v-bind:src="url">` in the html file.
- * Notice how the object no longer uses `{{ }}` when expressed in the directive `v-bind`.
+ * Notice how the object no longer uses `{{ }}` when expressing the `url` property in the directive `v-bind`.
 
 Notice using the directive for bind can be used for many attributes. 
 * `v-bind:alt`
@@ -112,26 +103,31 @@ Notice using the directive for bind can be used for many attributes.
             <p>
                 <a v-bind:href="url">link</a>
             </p>
-* Use the `v-html` directive in a new element `vmHtml`.  Create a new data object `vmHtml`.<br>
+* Use the `v-html` directive in a new `<p>` tag.  Create a new data object `vmHtml: "<span style='color:red; border: solid 2px purple;'>Pretty aren't I?</span>"`.<br>
 Side note - In an existing element will replace content like using `innerHTML`.
 
-* Use another directive in our image tag `v-on:click` which calls a new method called `alert` with an alert message .
+* Now let's create an event handler by using another directive in our image tag `v-on:click` which will call new method `alert` which we will now create that contains a greeting with the `first_name`.
 
 ### 3. Instructor Do (5 min)
 `Form input bindings allow our app to receive user's data.`
 * Now let's create on input field that gives our user the ability to change our `first_name` and `last_name`.  
 * `<input v-model="first_name">`
 * `<input v-model="last_name">`
-* Notice how every piece of `first_name` is updated including the alert!  `v-model` has created a 2-way data bind.(data flows from the view as well as to the view from the app)
+* Notice how every piece of `first_name` is now updated including the alert!  `v-model` has created a 2-way data bind.(data flows from the view as well as to the view from the app)
 * A consistent, stable, and fast UI data state that is easily maintained is the hallmark of a modern front-end framework.
 
 ### 4. Student Do - Conditional Rendering(5 min)
+
+* if `first_name` is empty, let's not display the first `<h1> Hello {{first_name}} </h1>`
 * if `last_name` is empty, let's not display the full name function using the directive 
-* Solution add `v-if="last_name"` to the `<h2>`
+* Solution add `v-if="first_name"` to the `<h1>` &
+`v-if="last_name"` to the `<h2>`
 
 
 #### Phase 4 - Class Activity (10 min)
-[click event](./click-event/click.js)
+[starter code](./click-event/Unsolved/index.html)<br>
+[js solution](./click-event/Solved/click.js) <br>
+[html solution](./click-event/Solved/index.html) <br>
 Using our starter html file, create a `click.js` file and create a new Vue instance. 
 This app should have four buttons with the following functionality.
 * add one year on a click
@@ -151,7 +147,7 @@ add a modifier that will prevent a button from working more than once.
     * `v-on:click.prevent` (preventDefault())
     * `v-on:keyup.enter` (press enter key)
 
-Make sure students understand the availability of other events as well like `mouseover`
+Make sure students understand the availability of other events as well like `mouseover`.
 * Comment on the readability of the code compared to jQuery.
 
 * Call on students to answer the following questions one at time, filling in gaps in their explanations as necessary:
@@ -163,14 +159,15 @@ Make sure students understand the availability of other events as well like `mou
   * **Q:** How do we set a click event listener modifier on an element in Vue to prevent default behavior?
     **A:** We use the directive `v-on:click.prevent`.
 
-### 6. Students Do: Giphy API Call (15 mins) 
+### 6. Students Do: Giphy API Call (20 mins) 
 [Giphy-challenge](./giphy-challenge/app.js)
 Start a new Vue app!
-Have an input search field that returns gifs related to that term.
-**Hint** How to loop through an array in the template script?
-
+Have an input search field that returns gifs related to your search term.<br>
+**Hint** How to loop through an array in the template script? <br> Use a directive!<br>
 
 ### 7. Instructor Do (5 min)
-* Walk Through solution starting with the fetch response.  Then looping through the array.
+* Demo the working website.
+* Walk Through solution starting with the fetch response.  
+* KEY POINT - `v-for="key in array"`<br>
 
 ## How did the lesson go?  Time tracking sufficiency?
