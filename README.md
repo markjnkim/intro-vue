@@ -29,3 +29,5 @@
 * One day of a 3 day course with assignment
 * Let students know that today's class is meant to be a gentle introduction to Vue.js. Few if any of your students will have even the faintest knowledge of Vue.js — so this class is all about an initial exposure.
 * Online class.
+
+## [Slide Presentation](https://docs.google.com/presentation/d/1cGttCli5C_dHWPycW_UGh9i8OLi_Ny9X7WkDYKkmArY/edit?usp=sharing)
