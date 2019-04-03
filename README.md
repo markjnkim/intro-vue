@@ -18,7 +18,6 @@
 
 ## Prerequisite Instructor Knowledge
 * Understanding how observers watch for changes in the data state to re-render.
-* 
 
 ## Other Relevant Context
 * One day of a 3 day course with assignment
