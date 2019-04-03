@@ -1,4 +1,4 @@
-# intro-vue
+# Trilogy Take-Home Exercise
 
 ## Prerequisite Student Knowledge
 * Javascript
